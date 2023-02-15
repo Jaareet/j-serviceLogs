@@ -4,7 +4,7 @@ lua54    'yes'
 
 author 'Jaareet#0542'
 description 'A simple service log script for FiveM'
-version '1.0.0'
+version '1.1.0'
 
 server_script 'server/main.lua'
 

@@ -1,4 +1,7 @@
 if (GetResourceState('es_extended'):match('start')) then
+    function convertHexToDecimal(hex)
+        return tonumber(hex, 16)
+    end
     local ESX = exports.es_extended.getSharedObject()
     local JOB_LOGS = {
         ['police'] = {
@@ -17,7 +20,7 @@ if (GetResourceState('es_extended'):match('start')) then
         --[[
             ['jobName'] = {
                 webhook = 'Here your webhook link',
-                color = Color_Code,
+                color = Color_Code or convertHexToDecimal('HEX_CODE'),
                 title = 'Example title',
                 message = 'El usuario %s ha fichado su %s' -- Recomended message format.
             },

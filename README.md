@@ -21,6 +21,18 @@ ensure j-serviceLogs
 - [x] Easy to use
 - [x] Easy to install
 - [x] Easy to configure
+- [x] Now you can set an hexadecimal color code and convert it to decimal with convertHexToDecimal function, example:
+
+```lua
+-- Path: server/main.lua (Insert into JOB_LOGS table)
+---@param color: string
+['example_job_name'] = { -- In your SQL `jobs` table, get the name.
+    webhook = 'https://discord.com/api/webhooks/...', -- Here your webhook link
+    color = convertHexToDecimal('#000'), -- Here your color code: color introduced: black.
+    title = 'Fichajes de los EMS', -- Your title here
+    message = 'El usuario %s ha fichado su %s', -- Recomended message format.
+},
+```
 
 ## Support
 
